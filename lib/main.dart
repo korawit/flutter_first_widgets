@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'Person.dart';
+import 'ProperForm.dart';
 
 void main() {
   runApp(const MyApp());
 }
-
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -29,19 +29,20 @@ class MyApp extends StatelessWidget {
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   } */
-   Widget build(BuildContext context) {
+  Widget build(BuildContext context) {
     return MaterialApp(
-      title: "My first flutter app",
-      home:  
-      Scaffold( 
-        appBar: AppBar(title: const Text("My first fultter app")
-        ),
-        body: Person(firstName: "Corgi",lastName: "Queen",email:"Corgi.queen@gmail.com"),
-        floatingActionButton: FloatingActionButton(child: const Icon(Icons.thumb_up),
-        onPressed: ()=>{}
-      )
-      )
-      );
+        title: "My first flutter app",
+        home: Scaffold(
+            appBar: AppBar(title: const Text("My first flutter app")),
+            body: /* Person(
+                firstName: "Korawit",
+                lastName: "Orkphol",
+                email: "korawit.orkphol@gmail.com"), */
+            const ProperForm(),
+            floatingActionButton: FloatingActionButton(
+                child: const Icon(Icons.cake,
+                    color: Color.fromARGB(255, 246, 108, 204), size: 50),
+                onPressed: () => print('cake button pressed!'))));
   }
 }
 
